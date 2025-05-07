@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Check-In</title>
+  <title>Probation Check-In</title>
 </head>
 <body>
-  <h1>Welcome! Please enter your name.</h1>
+  <h1>Welcome to Uxbridge Probation! Please enter your name.</h1>
   <form onsubmit="return checkName()">
     First Name: <input type="text" id="firstName" required><br>
     Last Name: <input type="text" id="lastName" required><br>
@@ -19,7 +19,7 @@
         localStorage.setItem("userFullName", `${first} ${last}`);
         window.location.href = "birthday.html";
       } else {
-        alert("Name not recognized. Try John Doe or Jane Smith.");
+        alert("Name not recognized.");
       }
       return false;
     }
