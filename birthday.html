@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirm Birthday</title>
+</head>
+<body>
+  <h1>Confirm your birthday</h1>
+  <form onsubmit="return checkBirthday()">
+    Birthday (MM/DD/YYYY): <input type="text" id="birthday" required><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function checkBirthday() {
+      const bday = document.getElementById("birthday").value.trim();
+      const name = localStorage.getItem("userFullName");
+
+      const validUsers = {
+        "john doe": "10/10/1980",
+        "jane smith": "07/11/1990"
+      };
+
+      if (validUsers[name] === bday) {
+        localStorage.setItem("confirmedUser", name);
+        window.location.href = "destination.html";
+      } else {
+        alert("Birthday does not match our records.");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

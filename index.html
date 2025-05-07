@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check-In</title>
+</head>
+<body>
+  <h1>Welcome! Please enter your name.</h1>
+  <form onsubmit="return checkName()">
+    First Name: <input type="text" id="firstName" required><br>
+    Last Name: <input type="text" id="lastName" required><br>
+    <input type="submit" value="Next">
+  </form>
+
+  <script>
+    function checkName() {
+      const first = document.getElementById("firstName").value.trim().toLowerCase();
+      const last = document.getElementById("lastName").value.trim().toLowerCase();
+      if ((first === "john" && last === "doe") || (first === "jane" && last === "smith")) {
+        localStorage.setItem("userFullName", `${first} ${last}`);
+        window.location.href = "birthday.html";
+      } else {
+        alert("Name not recognized. Try John Doe or Jane Smith.");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

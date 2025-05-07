@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Destination</title>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <div id="message"></div>
+
+  <script>
+    const user = localStorage.getItem("confirmedUser");
+    const destinations = {
+      "john doe": "Please proceed to Room 101 on the first floor.",
+      "jane smith": "Please proceed to Room 202 on the second floor."
+    };
+
+    if (user && destinations[user]) {
+      document.getElementById("message").innerText = destinations[user];
+    } else {
+      document.getElementById("message").innerText = "User not recognized. Please start over.";
+    }
+  </script>
+</body>
+</html>
