@@ -9,13 +9,14 @@
 
   <script>
     const user = localStorage.getItem("confirmedUser");
-    const destinations = {
-      "john doe": "Please proceed to Room 101 on the first floor.",
-      "jane smith": "Please proceed to Room 202 on the second floor."
-    };
 
-    if (user && destinations[user]) {
-      document.getElementById("message").innerText = destinations[user];
+    if (user) {
+      // Capitalize first letter of each part of the name
+      const nameFormatted = user.split(' ')
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(' ');
+      document.getElementById("message").innerText = 
+        `Hello ${nameFormatted}, please report to Courtroom 1 located on the first floor.`;
     } else {
       document.getElementById("message").innerText = "User not recognized. Please start over.";
     }
