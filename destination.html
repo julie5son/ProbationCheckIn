@@ -1,25 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
   <title>Your Destination</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <div id="message"></div>
+  <main>
+    <h1>Welcome!</h1>
+    <div id="message"></div>
+  </main>
+
+  <div class="contact-section">
+    <div>
+        <h2>📍 Address</h2>
+        <p>261 South Main Street, Uxbridge, MA 01569</p>
+        <a href="#">Directions →</a>
+    </div>
+    <div>
+        <h2>📞 Phone</h2>
+        <ul>
+            <li>Clerk's Office: <a href="tel:5082782454">(508) 278-2454</a></li>
+            <li>Probation Department: <a href="tel:5082782408">(508) 278-2408</a></li>
+            <li>TTY: <a href="tel:5082789535">(508) 278-9535</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>💻 Online</h2>
+        <p>Email: <a href="mailto:cmuxbridgedc@jud.state.ma.us">cmuxbridgedc@jud.state.ma.us</a></p>
+    </div>
+    <div>
+        <h2>📠 Fax</h2>
+        <ul>
+            <li>Clerk’s Office: (508) 278-2929</li>
+            <li>Probation Department: (508) 278-5603</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="buttons-wrapper">
+    <a class="button-link" href="#">View daily list (PDF)</a>
+    <a class="button-link" href="#">Public access to Uxbridge District Court events</a>
+    <a class="button-link" href="#">Search court dockets, calendars, and case information</a>
+    <a class="button-link" href="#">Sign up for civil court date text reminders (PDF)</a>
+    <a class="button-link" href="#">Forms</a>
+    <a class="button-link" href="#">Filing fees</a>
+  </div>
 
   <script>
-    const user = localStorage.getItem("confirmedUser");
+    const user = localStorage.getItem("confirmedUser"); // Match key used in form page
 
     if (user) {
-      // Capitalize first letter of each part of the name
       const nameFormatted = user.split(' ')
         .map(part => part.charAt(0).toUpperCase() + part.slice(1))
         .join(' ');
       document.getElementById("message").innerText = 
         `Hello ${nameFormatted}, please report to Courtroom 1 located on the first floor.`;
     } else {
-      document.getElementById("message").innerText = "User not recognized. Please start over.";
+      document.getElementById("message").innerText = 
+        "User not recognized. Please start over.";
     }
   </script>
 </body>
