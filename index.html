@@ -5,16 +5,18 @@
   <title>Probation Check-In</title>
 </head>
 <body>
-  <h1>Welcome to Uxbridge Probation! Please enter your name.</h1>
-  <form onsubmit="return checkName()">
-    <div class="name-inputs">
-      <label for="firstName">First Name:</label>
-      <input type="text" id="firstName" required>
-      <label for="lastName">Last Name:</label>
-      <input type="text" id="lastName" required>
-    </div>
-    <input type="submit" value="Next">
-  </form>
+  <main>
+    <h1>Welcome to Uxbridge Probation! Please enter your name.</h1>
+    <form onsubmit="return checkName()">
+      <div class="name-inputs">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+      </div>
+      <input type="submit" value="Next">
+    </form>
+  </main>
 
   <script>
     function checkName() {
