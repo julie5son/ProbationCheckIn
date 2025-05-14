@@ -55,7 +55,7 @@
         .map(part => part.charAt(0).toUpperCase() + part.slice(1))
         .join(' ');
       document.getElementById("message").innerText = 
-        `Hello ${nameFormatted}, please report to Courtroom 1 located on the first floor.`;
+        `Hello ${nameFormatted}, please report to Courtroom 1 located on the first floor. You have been checked in.`;
     } else {
       document.getElementById("message").innerText = 
         "User not recognized. Please start over.";
