@@ -1,27 +1,100 @@
 ter/* style.css */
-
+}
+/* Overall page layout */
 body {
-  font-family: Arial, sans-serif;
-  background-image: url('Trial-Court-Seal-MPS-Final-bw.png'); 
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  color: #000; /* Adjust for readability over your background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Trial-Court-Seal-MPS-Final-bw.png'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    margin: 20px;
+    color: #222;
 }
 
+/* Main header */
 h1 {
-  margin-top: 50px;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
 }
 
-form {
-  margin-top: 30px;
+/* Address and contact container */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1em;
 }
 
-input, select {
-  font-size: 16px;
-  padding: 5px;
-  margin: 5px;
+.contact-section div {
+    flex: 1 1 300px;
+    margin-bottom: 1em;
+}
+
+/* Section titles */
+.contact-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Contact list */
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8em;
+}
+
+.contact-section li a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.contact-section li a:hover {
+    text-decoration: underline;
+}
+
+/* Public WiFi section */
+.public-wifi {
+    text-align: center;
+    color: #444;
+    font-size: 0.85em;
+    margin-top: -1em;
+}
+
+/* Icon placeholder */
+.public-wifi::before {
+    content: "📶";
+    display: block;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+/* Button-style links */
+.button-link {
+    display: inline-block;
+    background-color: #e6eef5;
+    border: 1px solid #6ba2cf;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 4px;
+    width: calc(30% - 1em);
+    text-align: center;
+    font-weight: bold;
+    color: #003f75;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #d9e7f0;
+}
+
+/* Responsive buttons wrap */
+.buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
