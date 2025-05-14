@@ -123,3 +123,9 @@ input[type="submit"]:hover {
 .button-link:hover {
   background-color: #cde2f5;
 }
+/* Court Seal Styling */
+.court-seal {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
