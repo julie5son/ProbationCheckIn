@@ -125,7 +125,9 @@ input[type="submit"]:hover {
 }
 /* Court Seal Styling */
 .court-seal {
-  width: 120px;
+  width: 100px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+  display: block;
 }
